@@ -1,0 +1,104 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  color: inherit;
+}
+
+img,
+video {
+  display: block;
+  width: 100%;
+}
+
+.textA {
+  color: #eb0000;
+  font-family: "Ibarra Real Nova";
+  font-size: 71px;
+  font-style: italic;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.textB {
+  color: #600e0e;
+  font-family: "Bebas Neue";
+  font-size: 71px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.slider {
+  position: relative; /* Référence (parent) pour le positionnement absolu */
+  display: block; /* La largeur du slider est égale à la largeur de l'image qu'il contient */
+}
+
+.slider-image-before {
+  display: block; /* Évite l'espace sous l'image */
+}
+
+.slider-image-after {
+  position: absolute; /* Positionné par rapport au parent (.slider) */
+  top: 0; /* Collé en haut du parent */
+  left: 0; /* Collé à gauche du parent */
+  width: 50%; /* Moitié de la largeur du parent */
+  height: 100%; /* Pleine hauteur du parent */
+  object-fit: cover; /* Évite la déformation de l'image */
+  object-position: left; /* Aligné à gauche */
+}
+
+.slider-separator {
+  width: 4px; /* Ligne de séparation */
+  height: 73%; /* Hauteur complète du conteneur */
+  position: absolute; /* Positionnée par rapport au parent (.slider) */
+  bottom: 70; /* Collée en haut */
+  left: 50%; /* Centrée horizontalement */
+  transform: translateX(-2px);
+  background: #f6d95e; /* Couleur noire pour la ligne */
+  display: flex; /* Active Flexbox pour centrer l’enfant (le handler) */
+  justify-content: center; /* Centre horizontalement le handler */
+  align-items: center; /* Centre verticalement le handler */
+  background: linear-gradient(
+    to top,
+    rgba(246, 217, 94, 0.3),
+    rgba(246, 217, 94, 1)
+  );
+  background: linear-gradient(
+    to bottom,
+    rgba(246, 217, 94, 1),
+    rgba(246, 217, 94, 0.3)
+  );
+}
+
+.slider-handler {
+  width: 100px; /* Largeur du bouton de glissement */
+  height: 100px; /* Hauteur identique (rond) */
+  background: #f6d95e; /* Fond noir */
+  border-radius: 100px; /* Coins arrondis = cercle */
+  flex-shrink: 0; /* Ne se réduit pas dans le conteneur flex */
+  transition: all 0.5s ease;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.slider-handler-left {
+  background-image: url("../img/before.png");
+}
+
+.slider-handler-middle {
+  background-image: url("../img/middle.png");
+}
+
+.slider-handler-right {
+  background-image: url("../img/after.png");
+}
+
+.slider-range {
+  position: absolute; /* Positionné au-dessus du slider (sur toute sa surface). */
+  inset: 0; /* Étendu sur toute la zone du parent (top/right/bottom/left = 0). */
+  opacity: 0; /* Rend l'input invisible, tout en restant interactif. */
+}
