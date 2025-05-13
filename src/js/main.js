@@ -19,8 +19,8 @@ var handler = document.querySelector(".slider-handler");
 var updatePosition = function () {
   var rawValue = parseInt(range.value);
 
-  var minLimit = 10;
-  var maxLimit = 90;
+  var minLimit = 7;
+  var maxLimit = 93;
 
   var limitedValue = Math.max(minLimit, Math.min(rawValue, maxLimit));
 

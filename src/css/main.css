@@ -77,7 +77,6 @@ video {
 .slider-handler {
   width: 100px; /* Largeur du bouton de glissement */
   height: 100px; /* Hauteur identique (rond) */
-  background: #f6d95e; /* Fond noir */
   border-radius: 100px; /* Coins arrondis = cercle */
   flex-shrink: 0; /* Ne se réduit pas dans le conteneur flex */
   transition: all 0.5s ease;
@@ -86,7 +85,7 @@ video {
 }
 
 .slider-handler-left {
-  background-image: url("../img/before.png");
+  background-image: url("../img/pourri2x.png");
 }
 
 .slider-handler-middle {
